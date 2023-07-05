@@ -47,3 +47,8 @@ Issue this command to run tests related to the Shop APIs withing the app contain
 
 php artisan test tests/Feature/ShopTest.php 
 ![img_1.png](img_1.png)
+
+
+## Link to the video recording  ##
+
+https://drive.google.com/file/d/1qVsHRnbaHrsjRStqfpKpVTC6vN7CWdd-/view?usp=sharing

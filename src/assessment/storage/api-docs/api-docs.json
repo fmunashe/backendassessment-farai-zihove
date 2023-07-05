@@ -1,0 +1,132 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Backend Developemnt Assessment Api Documentation",
+        "description": "Econet Backend Development Assessment Api Documentation",
+        "contact": {
+            "name": "Farai Zihove",
+            "email": "zihovem@gmail.com@"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/api"
+        }
+    ],
+    "paths": {
+        "/areas": {
+            "get": {
+                "tags": [
+                    "Areas"
+                ],
+                "summary": "Get list of areas",
+                "description": "Get list of areas",
+                "operationId": "index",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "the page number",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "order  accepts 'asc' or 'desc'",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": "200"
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Areas"
+                ],
+                "summary": "Store Area in DB",
+                "description": "Store Area in DB",
+                "operationId": "store",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "area_name"
+                                ],
+                                "properties": {
+                                    "area_name": {
+                                        "type": "string",
+                                        "format": "string",
+                                        "example": "Harare CBD"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "status": {
+                                            "type": "integer",
+                                            "example": ""
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
