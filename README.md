@@ -33,3 +33,10 @@
 - A get request to  localhost/api/shops/1  will give you an shop with the ID of 1
 - A put request to  localhost/api/shops/1  with a json body of {"shop_name":"new name","area_id":1}  will update shop with the given ID to the new name
 - A post request to localhost/api/shops with a json body of "shop_name":"shop name" will create a new shop name in the DB
+
+###  To run feature Tests ###
+
+Issue this command to run tests related to the area APIs withing the app container in the assessment directory
+
+php artisan test tests/Feature/AreaTest.php
+![img.png](img.png)
