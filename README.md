@@ -40,3 +40,10 @@ Issue this command to run tests related to the area APIs withing the app contain
 
 php artisan test tests/Feature/AreaTest.php
 ![img.png](img.png)
+
+
+Issue this command to run tests related to the Shop APIs withing the app container in the assessment directory
+
+
+php artisan test tests/Feature/ShopTest.php 
+![img_1.png](img_1.png)
