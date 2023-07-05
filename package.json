@@ -1,0 +1,27 @@
+{
+  "name": "lemp",
+  "version": "1.0.0",
+  "description": "Docker container for dev needs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "go": "node index.js",
+    "docker:launch": "docker-compose up -d",
+    "setup:wp" : "docker exec app wp core download --path=wp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flickerleap/docker-lemp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flickerleap/docker-lemp/issues"
+  },
+  "homepage": "https://github.com/flickerleap/docker-lemp#readme",
+  "dependencies": {
+    "prompts": "^2.1.0",
+    "replace-in-file": "^4.1.0",
+    "shelljs": "^0.8.3"
+  }
+}
